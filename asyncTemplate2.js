@@ -21,7 +21,7 @@ class DataService {
 
     async getPosts(userId) {
         try {
-            let response = await fetch(`${this.url}/posts?userId=/${userId}`);
+            let response = await fetch(`${this.url}/posts?userId=${userId}`);
             let data = await response.json();
             
             return data;
@@ -34,7 +34,7 @@ class DataService {
 
     async getComments(postId) {
         try {
-            let response = await fetch(`${this.url}/comments?postId=/${postId}`);
+            let response = await fetch(`${this.url}/comments?postId=${postId}`);
             let data = await response.json();
             
             return data;
